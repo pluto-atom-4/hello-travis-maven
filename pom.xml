@@ -4,7 +4,7 @@
 
     <groupId>internal.example</groupId>
     <artifactId>hello-travis-maven</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>hello-travis-maven</name>
@@ -14,7 +14,7 @@
         <url>https://github.com/pluto-atom-4/hello-travis-maven</url>
         <connection>scm:git:https://github.com/pluto-atom-4/hello-travis-maven.git</connection>
         <developerConnection>scm:git:https://github.com/pluto-atom-4/hello-travis-maven.git</developerConnection>
-      <tag>v{project.version}</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <parent>
