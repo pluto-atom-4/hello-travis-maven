@@ -11,6 +11,12 @@
     <name>hello-travis-maven</name>
     <description>Demo project for Spring Boot</description>
 
+    <scm>
+        <url>https://github.com/pluto-atom-4/hello-travis-maven</url>
+        <connection>scm:git:https://github.com/pluto-atom-4/hello-travis-maven.git</connection>
+        <developerConnection>scm:git:https://github.com/pluto-atom-4/hello-travis-maven.git</developerConnection>
+    </scm>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -37,11 +43,30 @@
         </dependency>
     </dependencies>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bitray-cy6ergn0m-maven</id>
+            <name>bintray-plugins</name>
+            <url>http://dl.bintray.com/cy6ern0m/maven</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagNameFormat>v{project.version}</tagNameFormat>
+                </configuration>
             </plugin>
         </plugins>
     </build>
